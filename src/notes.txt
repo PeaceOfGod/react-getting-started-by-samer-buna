@@ -1,1 +1,3 @@
 React reduces ambiguity about the way we update User interfaces.
+#States are mutable while props are immutable
+#[val, setVal] = useState(initialVal)
