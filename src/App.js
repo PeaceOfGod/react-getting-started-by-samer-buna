@@ -3,8 +3,9 @@ import { useState } from 'react';
 
 
 function Button(props){
+  const handleClick = () => props.onClickFunction(props.increment);
   return (
-    <button onClick={() => props.onClickFunction(props.increment)}>
+    <button onClick={handleClick}>
       +{props.increment}
     </button>
   );
@@ -12,7 +13,7 @@ function Button(props){
 
 function Display(props){
   return (
-    <div>{props.message}</div>
+    <div className="result">{props.message}</div>
   );
 }
 
@@ -21,7 +22,7 @@ function App() {
   const incrementCounter = (incrementValue) => setCounter(counter+incrementValue);
   
   return (
-    <div>
+    <div className="button-clicks">
       <Button onClickFunction={incrementCounter} increment={1} />
       <Button onClickFunction={incrementCounter} increment={5} />
       <Button onClickFunction={incrementCounter} increment={10} />

@@ -1,0 +1,1 @@
+React reduces ambiguity about the way we update User interfaces.
